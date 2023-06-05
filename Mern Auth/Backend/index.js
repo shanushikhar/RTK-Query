@@ -9,6 +9,9 @@ dotenv.config();
 const Port = process.env.PORT || 3500;
 connectDB();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/api/users", router);
 app.use(notFound);
 app.use(errorHandler);
