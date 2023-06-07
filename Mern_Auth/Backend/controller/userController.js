@@ -69,7 +69,7 @@ const logoutUser = (req, res) => {
 // @route   GET /api/users/profile
 // @access  Private
 const getUserProfile = asyncHandler(async (req, res) => {
-  console.log(req);
+  // console.log(req);
   if (req.user) {
     res.json({
       _id: req.user._id,
